@@ -1,7 +1,11 @@
-const { Output, Input } = require('./serializer.js');
-const fs = require('fs');
-let json = require('./data.json');
-const express = require('express');
+import { Output, Input } from './serializer.js';
+import { writeFileSync } from 'fs';
+// 
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const json = require("./data.json");
+// 
+import express from 'express';
 const app = express();
 const port = 3000;
 
@@ -40,5 +44,5 @@ app.get('/writeanswer', async (request, response) => {
     let result = b.Deserialize(a);
 
     json.answer = JSON.parse(result);
-    fs.writeFileSync('./httpClient/data.json', JSON.stringify(json));
+    writeFileSync('./httpClient/data.json', JSON.stringify(json));
 })

@@ -1,8 +1,8 @@
-const { XMLParser, XMLBuilder } = require('fast-xml-parser');
+import { XMLParser, XMLBuilder } from 'fast-xml-parser';
 const builder = new XMLBuilder();
 const parser = new XMLParser();
 
-class Input {
+export class Input {
     constructor(type = "", obj = {}) {
         this.type = type;
         if (type == "json") {
@@ -20,7 +20,7 @@ class Input {
     }
 }
 
-class Output {
+export class Output {
     Deserialize(variable) {
         this.SumResult = +(variable.Sums.reduce((a, b) => a + b) * variable.K).toFixed(2);
         this.MulResult = +(variable.Muls.reduce((a, b) => a * b)).toFixed(2);
@@ -36,6 +36,6 @@ class Output {
     
 }
 
-module.exports = {
+/* module.exports = {
     Output, Input
-}
+} */
