@@ -7,6 +7,7 @@ export class Input {
         this.type = type;
         if (type == "json") {
             let parsed = JSON.parse(obj);
+            console.log(parsed);
             this.K = parsed.K;
             this.Sums = parsed.Sums;
             this.Muls = parsed.Muls;
