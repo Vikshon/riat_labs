@@ -36,7 +36,3 @@ export class Output {
     }
     
 }
-
-/* module.exports = {
-    Output, Input
-} */

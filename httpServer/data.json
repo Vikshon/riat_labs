@@ -1,1 +1,1 @@
-{"data":{"K":15,"Sums":[1.01,2.02],"Muls":[1,4]},"answer":{"SumResult":20.3,"MulResult":4,"SortedInputs":[1,1.01,2.02,4]}}
+{"data":{"K":10,"Sums":[1.01,2.02],"Muls":[1,4]},"answer":{"SumResult":66.6,"MulResult":4,"SortedInputs":[1,1.01,2.02,4]}}

@@ -5,7 +5,7 @@ import { Input, Output } from '../httpServer/serializer.js';
 import axios from 'axios';
 Ping();
 // GetInputData();
-// WriteAnswer();
+WriteAnswer();
 
 function Ping()
 {
@@ -30,7 +30,7 @@ async function WriteAnswer()
     let answer = `{"SumResult":30.3,"MulResult":4,"SortedInputs":[1,1.01,2.02,4]}`;
     let data = await fetch(`http://localhost:3000/writeanswer?obj=${answer}`, {method: 'POST', body: "asd"}); */
     
-    let answer = `{"SumResult":20.3,"MulResult":4,"SortedInputs":[1,1.01,2.02,4]}`;
+    let answer = `{"SumResult":66.6,"MulResult":4,"SortedInputs":[1,1.01,2.02,4]}`;
     axios.post(`http://localhost:3000/writeanswer`, {
         output: answer
     })
